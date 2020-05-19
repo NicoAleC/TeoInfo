@@ -14,18 +14,22 @@ def toString(cp):
 
 diccionario = "abcdefghijklmnopqrstuvwxyz "
 
-palabra = "su majestad ha vuelto garfield"
+#MLGIY_LGEUGQEMML
+palabra = "mlgiy lgeugqemml"
 
 pcodif =  []
 
 pdcodif = []
-a = 7
+#a = 7
 #a = 4
+a = 5
 
-b = 11
+#b = 11
 #b = 15
+b = 11
 
 m = len(diccionario)
+print("m = " + str(m))
 
 def inversA(a):
     aux = 0
@@ -47,8 +51,8 @@ def decodificar(lpalabra):
         aux = (inversA(a) * (diccionario.index(lpalabra[i]) - b)) % m
         pdcodif.append(diccionario[aux])
         
-codificar(palabra)
-decodificar(pcodif)
+#codificar(palabra)
+decodificar(palabra)
 print("Palabra original:\n" + palabra)
-print("Palabra codificada:\n" + toString(pcodif))
+#print("Palabra codificada:\n" + toString(pcodif))
 print("Palabra decodificada:\n" + toString(pdcodif))
