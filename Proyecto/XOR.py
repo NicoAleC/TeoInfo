@@ -21,6 +21,13 @@ def descifrarX(lp, mensaje):
     for i in range(0, len(mensaje)):
         aux.append(mensaje[i] ^ lp)
     return aux
+
+def aLista(mensaje):
+    aux = []
+    for i in range(0, len(mensaje)):
+        aux.append(ord(mensaje[i]))
+    return aux
+
 """
 m = cifrar(llavePrivada(A, B), Mensaje)
 print("Mensaje cifrado")
