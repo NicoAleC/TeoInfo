@@ -13,13 +13,13 @@ diccionario = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ "
 
 Mensaje = "hola bola"
 
-operar = input("Escoja una opción:\n0: Saltar\n1:Encriptar\n2: Desencriptar\n")
-
 print("Inicializando valores para el cifrador de XOR")
 A = int(input("Introducir valor de la llave A:\n")) % 256
 #B = 15
 B = int(input("Introducir valor de la llave B:\n")) % 256
 LP = llavePrivada(A, B)
+
+operar = input("Escoja una opción:\n0: Saltar\n1:Encriptar\n2: Desencriptar\n")
 
 if operar == "1":
     print("Inicializando valores para el cifrador de Arco")
