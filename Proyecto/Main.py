@@ -19,7 +19,7 @@ A = int(input("Introducir valor de la llave A:\n")) % 256
 B = int(input("Introducir valor de la llave B:\n")) % 256
 LP = llavePrivada(A, B)
 
-operar = input("Escoja una opción:\n0: Saltar\n1:Encriptar\n2: Desencriptar\n")
+operar = input("Escoja una opción:\n0: Saltar\n1: Encriptar\n2: Desencriptar\n")
 
 if operar == "1":
     print("Inicializando valores para el cifrador de Arco")
@@ -31,14 +31,11 @@ if operar == "1":
     mensaje_cifradoA = str(cifrarA(R, Alfa, Mensaje, diccionario)) + ";" + str(R)
     print("Mensaje cifrado con Arco:\n" + mensaje_cifradoA)
     mensaje_cifradoX = cifrarX(LP, mensaje_cifradoA)
-    print("--------------\n" + str(mensaje_cifradoX) + "\n--------------")
     print("Mensaje cifrado con XOR:\n" + "".join(map(chr, mensaje_cifradoX)))
 elif operar == "2":
     #descifrado
     mensaje_descifradoX = descifrarX(LP, aLista(input("Introduzca el mensaje encriptado:\n")))
-    print("--------------\n" + str(mensaje_descifradoX) + "\n--------------")
     aux_mdX = "".join(map(chr, mensaje_descifradoX))
-    print("--------------\n" + aux_mdX + "\n--------------")
     aux_mdX2, radio = aux_mdX.split(";")
     Alfa = int(radio) / len(diccionario)
     print("Mensaje descifrado con XOR:\n" + aux_mdX)
